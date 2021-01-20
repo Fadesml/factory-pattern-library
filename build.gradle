@@ -1,0 +1,15 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.fadesml.factory'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.reflections/reflections
+    compile group: 'org.reflections', name: 'reflections', version: '0.9.11'
+}
