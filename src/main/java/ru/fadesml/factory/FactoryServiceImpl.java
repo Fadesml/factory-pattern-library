@@ -53,7 +53,8 @@ public class FactoryServiceImpl implements FactoryService {
             }
         }
 
-        throw new FactoryObjectNotFoundException("Factory can't find and create non-existent object");
+        throw new FactoryObjectNotFoundException("How to avoid this exception, see in documentation. \n" +
+                "See https://github.com/Fadesml/factory-pattern-library/");
     }
 
     /**
@@ -92,7 +93,7 @@ public class FactoryServiceImpl implements FactoryService {
         for (String path : subObjectResourcePathList) {
             for (Class<?> object : new Reflections(path).getSubTypesOf(baseObjectClass)) {
                 try {
-                    if (!object.getAnnotation(FactoryObjectAnnotation.class).key().isEmpty()) {
+                    if (object.getAnnotation(FactoryObjectAnnotation.class) != null) {
                         result.add(object.newInstance());
                     }
                 } catch (NullPointerException ignored) { }

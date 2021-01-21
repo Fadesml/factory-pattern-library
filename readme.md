@@ -77,4 +77,4 @@ How to avoid this exception:
 
 ____
 ### Example
-An example of implementing the factory pattern using this library can be found here - https://github.com/Fadesml/factory-pattern-library-example
+An example of implementing the factory pattern using this library can be found here - https://github.com/Fadesml/factory-pattern-library/tree/master/src/main/java/ru/fadesml/factory/example
