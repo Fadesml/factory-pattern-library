@@ -53,17 +53,17 @@ ____
 |:----------------:|:---------:|:----------------:|
 | *key* | *String* | Child object key from *@FactoryObjectAnnotation* in your child class |
 
-throws - IllegalAccessException, InstantiationException  
+throws - IllegalAccessException, InstantiationException, FactoryObjectNotFoundException  
 return type - Object  
 returns One of the children object of your parent class, which key from *@FactoryObjectAnnotation* == parameter *key*, and founded in the *subObjectResourcePathList* packages.
 
 ###### *createListOfAllChildren*
-throws - IllegalAccessException, InstantiationException  
+throws - IllegalAccessException, InstantiationException, FactoryObjectNotFoundException  
 return type - List of Object  
 returns List of all child objects of your parent class, founded in the *subObjectResourcePathList* packages.
 
 ###### *createListOfAllDeclaredChildren*
-throws - IllegalAccessException, InstantiationException  
+throws - IllegalAccessException, InstantiationException, FactoryObjectNotFoundException  
 return type - List of Object  
 returns List of all child objects of your parent class which have FactoryObjectAnnotation, founded in the subObjectResourcePathList packages.
 ____
@@ -72,8 +72,8 @@ ____
 #### *FactoryObjectNotFoundException*
 Throws if library can't find *FactoryObjectAnnotation* in your child class  
 How to avoid this exception:
-1. If an error occurs when using the *create ()* method, please check the @FactoryObjectAnnotation of your child classes, making sure to make unique annotation parameter *key* values for each of them
-2. If an error occurs when using the *createAll()* method, please check your *subObjectResourcePathList* when initializing *FactoryService*
+1. If an error occurs when using the *createChildByKey()* method, please check the @FactoryObjectAnnotation of your child classes, making sure to make unique annotation parameter *key* values for each of them
+2. If an error occurs when using the *createListOfAllChildren()* or *createListOfAllDeclaredChildren()* method, please check your *subObjectResourcePathList* when initializing *FactoryService*
 ____
 ### Example
 An example of implementing the factory pattern using this library can be found here - https://github.com/Fadesml/factory-pattern-library-example
