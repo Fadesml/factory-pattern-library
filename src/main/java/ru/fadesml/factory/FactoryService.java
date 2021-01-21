@@ -7,11 +7,12 @@ import java.util.List;
 /**
  * Interface FactoryService.
  *
- * @version 1.0
+ * @version 1.2
  * @autor Fadesml
  */
 
 public interface FactoryService {
-    Object create(String key) throws IllegalAccessException, InstantiationException, FactoryObjectNotFoundException;
-    List<Object> createAll() throws IllegalAccessException, InstantiationException, FactoryObjectNotFoundException;
+    Object createChildByKey(String key) throws IllegalAccessException, InstantiationException, FactoryObjectNotFoundException;
+    List<Object> createListOfAllChildren() throws IllegalAccessException, InstantiationException, FactoryObjectNotFoundException;
+    List<Object> createListOfAllDeclaredChildren() throws IllegalAccessException, InstantiationException, FactoryObjectNotFoundException;
 }

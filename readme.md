@@ -48,7 +48,7 @@ ____
 | *subObjectResourcePathList* | *List<String>* | List of paths that have child classes derived from your parent classes |
 | *baseObjectClass* | *Class<?>* | The parent class of your future factory |
 ##### Methods
-###### *create*
+###### *createChildByKey*
 | Parameter | Type | Purpose |
 |:----------------:|:---------:|:----------------:|
 | *key* | *String* | Child object key from *@FactoryObjectAnnotation* in your child class |
@@ -57,10 +57,15 @@ throws - IllegalAccessException, InstantiationException
 return type - Object  
 returns One of the children object of your parent class, which key from *@FactoryObjectAnnotation* == parameter *key*, and founded in the *subObjectResourcePathList* packages.
 
-###### *createAll*
+###### *createListOfAllChildren*
 throws - IllegalAccessException, InstantiationException  
 return type - List of Object  
 returns List of all child objects of your parent class, founded in the *subObjectResourcePathList* packages.
+
+###### *createListOfAllDeclaredChildren*
+throws - IllegalAccessException, InstantiationException  
+return type - List of Object  
+returns List of all child objects of your parent class which have FactoryObjectAnnotation, founded in the subObjectResourcePathList packages.
 ____
 
 ### Exceptions

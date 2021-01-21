@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Class FactoryServiceImpl.
  *
- * @version 2.0
+ * @version 2.2
  * @autor Fadesml
  */
 
@@ -42,7 +42,7 @@ public class FactoryServiceImpl implements FactoryService {
      *      making sure to make unique annotation parameter key values for each of them
      */
     @Override
-    public Object create(String key) throws IllegalAccessException, InstantiationException, FactoryObjectNotFoundException {
+    public Object createChildByKey(String key) throws IllegalAccessException, InstantiationException, FactoryObjectNotFoundException {
         for (String path : subObjectResourcePathList) {
             for (Class<?> object : new Reflections(path).getSubTypesOf(baseObjectClass)) {
                 try {
@@ -64,7 +64,7 @@ public class FactoryServiceImpl implements FactoryService {
      * @throws FactoryObjectNotFoundException if an error occurs, please check your subObjectResourcePathList when you initialize FactoryService
      */
     @Override
-    public List<Object> createAll() throws IllegalAccessException, InstantiationException, FactoryObjectNotFoundException {
+    public List<Object> createListOfAllChildren() throws IllegalAccessException, InstantiationException, FactoryObjectNotFoundException {
         List<Object> result = new ArrayList<>();
         for (String path : subObjectResourcePathList) {
             for (Class<?> object : new Reflections(path).getSubTypesOf(baseObjectClass)) {
@@ -74,6 +74,33 @@ public class FactoryServiceImpl implements FactoryService {
         if (result.isEmpty()) {
             throw new FactoryObjectNotFoundException("How to avoid this exception, see in documentation. \n" +
                         "See https://github.com/Fadesml/factory-pattern-library/");
+        }
+
+        return result;
+    }
+
+    /**
+     * @return-type List of Object
+     * @return List of all child objects of your parent class which have FactoryObjectAnnotation, founded in the subObjectResourcePathList packages.
+     * @throws IllegalAccessException
+     * @throws InstantiationException
+     * @throws FactoryObjectNotFoundException if an error occurs, please check your subObjectResourcePathList when you initialize FactoryService
+     */
+    @Override
+    public List<Object> createListOfAllDeclaredChildren() throws IllegalAccessException, InstantiationException, FactoryObjectNotFoundException {
+        List<Object> result = new ArrayList<>();
+        for (String path : subObjectResourcePathList) {
+            for (Class<?> object : new Reflections(path).getSubTypesOf(baseObjectClass)) {
+                try {
+                    if (!object.getAnnotation(FactoryObjectAnnotation.class).key().isEmpty()) {
+                        result.add(object.newInstance());
+                    }
+                } catch (NullPointerException ignored) { }
+            }
+        }
+        if (result.isEmpty()) {
+            throw new FactoryObjectNotFoundException("How to avoid this exception, see in documentation. \n" +
+                    "See https://github.com/Fadesml/factory-pattern-library/");
         }
 
         return result;
