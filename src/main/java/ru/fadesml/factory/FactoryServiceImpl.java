@@ -9,14 +9,18 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Class CoffeeService.
+ * Class FactoryServiceImpl.
  *
- * @version 1.0
+ * @version 2.0
  * @autor Fadesml
  */
 
 public class FactoryServiceImpl implements FactoryService {
+
+    /** List of String with package which have your children classes */
     private final List<String> subObjectResourcePathList;
+
+    /** Parent object class */
     private final Class<?> baseObjectClass;
 
     public FactoryServiceImpl(Class<?> baseObjectClass, String ... subObjectResourcePath) {
@@ -27,8 +31,18 @@ public class FactoryServiceImpl implements FactoryService {
 
     }
 
+    /**
+     * @param key
+     * @return-type Object
+     * @return One of the children object of your parent class, which key from @FactoryObjectAnnotation == parameter key,
+     *      and founded in the subObjectResourcePathList packages.
+     * @throws IllegalAccessException
+     * @throws InstantiationException
+     * @throws FactoryObjectNotFoundException if an error throws, please check the @FactoryObjectAnnotation of your child classes,
+     *      making sure to make unique annotation parameter key values for each of them
+     */
     @Override
-    public Object create(String key) throws IllegalAccessException, InstantiationException {
+    public Object create(String key) throws IllegalAccessException, InstantiationException, FactoryObjectNotFoundException {
         for (String path : subObjectResourcePathList) {
             for (Class<?> object : new Reflections(path).getSubTypesOf(baseObjectClass)) {
                 try {
@@ -38,16 +52,19 @@ public class FactoryServiceImpl implements FactoryService {
                 } catch (NullPointerException ignored) { }
             }
         }
-        try {
-            throw new FactoryObjectNotFoundException("Factory can't find and create non-existent object");
-        } catch (FactoryObjectNotFoundException e) {
-            e.printStackTrace();
-        }
-        return null;
+
+        throw new FactoryObjectNotFoundException("Factory can't find and create non-existent object");
     }
 
+    /**
+     * @return-type List of Object
+     * @return List of all child objects of your parent class, founded in the subObjectResourcePathList packages.
+     * @throws IllegalAccessException
+     * @throws InstantiationException
+     * @throws FactoryObjectNotFoundException if an error occurs, please check your subObjectResourcePathList when you initialize FactoryService
+     */
     @Override
-    public List<Object> createAll() throws IllegalAccessException, InstantiationException {
+    public List<Object> createAll() throws IllegalAccessException, InstantiationException, FactoryObjectNotFoundException {
         List<Object> result = new ArrayList<>();
         for (String path : subObjectResourcePathList) {
             for (Class<?> object : new Reflections(path).getSubTypesOf(baseObjectClass)) {
@@ -55,12 +72,8 @@ public class FactoryServiceImpl implements FactoryService {
             }
         }
         if (result.isEmpty()) {
-            try {
-                throw new FactoryObjectNotFoundException("How to avoid this exception, see in documentation. \n" +
+            throw new FactoryObjectNotFoundException("How to avoid this exception, see in documentation. \n" +
                         "See https://github.com/Fadesml/factory-pattern-library/");
-            } catch (FactoryObjectNotFoundException e) {
-                e.printStackTrace();
-            }
         }
 
         return result;

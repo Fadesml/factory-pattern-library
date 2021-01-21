@@ -5,7 +5,7 @@ import ru.fadesml.factory.exceptions.FactoryObjectNotFoundException;
 import java.util.List;
 
 /**
- * Interface CoffeService.
+ * Interface FactoryService.
  *
  * @version 1.0
  * @autor Fadesml
@@ -13,5 +13,5 @@ import java.util.List;
 
 public interface FactoryService {
     Object create(String key) throws IllegalAccessException, InstantiationException, FactoryObjectNotFoundException;
-    List<Object> createAll() throws IllegalAccessException, InstantiationException;
+    List<Object> createAll() throws IllegalAccessException, InstantiationException, FactoryObjectNotFoundException;
 }

@@ -1,9 +1,9 @@
 package ru.fadesml.factory.exceptions;
 
 /**
- * Class FactoryObjectNotFoundException.
+ * Exception FactoryObjectNotFoundException.
  *
- * @version 1.0
+ * @version 1.4
  * @autor Fadesml
  */
 
