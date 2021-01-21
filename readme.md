@@ -72,7 +72,9 @@ ____
 #### *FactoryObjectNotFoundException*
 How to avoid this exception:
 1. If an error occurs when using the *createChildByKey()* method, please check the @FactoryObjectAnnotation of your child classes, making sure to make unique annotation parameter *key* values for each of them
-2. If an error occurs when using the *createListOfAllChildren()* or *createListOfAllDeclaredChildren()* method, please check your *subObjectResourcePathList* when initializing *FactoryService*
+2. If an error occurs when using the *createListOfAllChildren()* or *createListOfAllDeclaredChildren()* method, please check your *subObjectResourcePathList* when initializing *FactoryService* or check your
+3. If an error occurs when using the *createListOfAllDeclaredChildren()* method, please check the @FactoryObjectAnnotation of your child classes, maybe it doesn't exist
+
 ____
 ### Example
 An example of implementing the factory pattern using this library can be found here - https://github.com/Fadesml/factory-pattern-library-example
