@@ -14,6 +14,10 @@ public class ParentObject {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public ParentObject() {
         this.name = "Parent";
     }

@@ -23,23 +23,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a39711d-7c71-42d1-9e46-deb4dde0697c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/fadesml/factory/example/AnotherPackageObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/fadesml/factory/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/fadesml/factory/example/entity/AdoptedSonObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/fadesml/factory/example/entity/DaughterObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/fadesml/factory/example/entity/ParentObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/fadesml/factory/example/entity/SonObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/fadesml/factory/FactoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/fadesml/factory/FactoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/fadesml/factory/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/fadesml/factory/example/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ru/fadesml/factory/example/entity/ParentObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ru/fadesml/factory/example/entity/ParentObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/fadesml/factory/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/fadesml/factory/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/fadesml/factory/example/entity/ParentObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/fadesml/factory/example/entity/ParentObject.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +122,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611202779596</updated>
       <workItem from="1611202781718" duration="59000" />
-      <workItem from="1611222670942" duration="4782000" />
+      <workItem from="1611222670942" duration="7465000" />
     </task>
     <servers />
   </component>
@@ -143,25 +138,29 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="1038" y="347" key="#com.intellij.ide.util.MemberChooser" timestamp="1611227735241">
+    <state x="632" y="171" key="#Project_Structure" timestamp="1611227973913">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1038" y="347" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400/-1680.195.1680.1010@0.0.2560.1400" timestamp="1611227735241" />
-    <state width="2504" height="434" key="GridCell.Tab.0.bottom" timestamp="1611227737003">
+    <state x="632" y="171" key="#Project_Structure/0.0.2560.1400/-1680.195.1680.1010@0.0.2560.1400" timestamp="1611227973913" />
+    <state x="1038" y="347" key="#com.intellij.ide.util.MemberChooser" timestamp="1611234788841">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2504" height="434" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1680.195.1680.1010@0.0.2560.1400" timestamp="1611227737003" />
-    <state width="2504" height="434" key="GridCell.Tab.0.center" timestamp="1611227737003">
+    <state x="1038" y="347" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400/-1680.195.1680.1010@0.0.2560.1400" timestamp="1611234788840" />
+    <state width="2504" height="434" key="GridCell.Tab.0.bottom" timestamp="1611235120262">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2504" height="434" key="GridCell.Tab.0.center/0.0.2560.1400/-1680.195.1680.1010@0.0.2560.1400" timestamp="1611227737003" />
-    <state width="2504" height="434" key="GridCell.Tab.0.left" timestamp="1611227737003">
+    <state width="2504" height="434" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1680.195.1680.1010@0.0.2560.1400" timestamp="1611235120262" />
+    <state width="2504" height="434" key="GridCell.Tab.0.center" timestamp="1611235120262">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2504" height="434" key="GridCell.Tab.0.left/0.0.2560.1400/-1680.195.1680.1010@0.0.2560.1400" timestamp="1611227737003" />
-    <state width="2504" height="434" key="GridCell.Tab.0.right" timestamp="1611227737003">
+    <state width="2504" height="434" key="GridCell.Tab.0.center/0.0.2560.1400/-1680.195.1680.1010@0.0.2560.1400" timestamp="1611235120262" />
+    <state width="2504" height="434" key="GridCell.Tab.0.left" timestamp="1611235120262">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2504" height="434" key="GridCell.Tab.0.right/0.0.2560.1400/-1680.195.1680.1010@0.0.2560.1400" timestamp="1611227737003" />
+    <state width="2504" height="434" key="GridCell.Tab.0.left/0.0.2560.1400/-1680.195.1680.1010@0.0.2560.1400" timestamp="1611235120262" />
+    <state width="2504" height="434" key="GridCell.Tab.0.right" timestamp="1611235120262">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2504" height="434" key="GridCell.Tab.0.right/0.0.2560.1400/-1680.195.1680.1010@0.0.2560.1400" timestamp="1611235120262" />
   </component>
 </project>

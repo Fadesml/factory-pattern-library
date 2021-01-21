@@ -14,15 +14,28 @@ import ru.fadesml.factory.exceptions.FactoryObjectNotFoundException;
 
 public class Main {
     private static final FactoryService familyFactory = new FactoryServiceImpl(ParentObject.class, "ru.fadesml.factory.example.entity");
-
     public static void main(String[] args) throws IllegalAccessException, FactoryObjectNotFoundException, InstantiationException {
-        //printed ParentObject{name='Son'}
+        //ParentObject{name='Son'}
+        //class ru.fadesml.factory.example.entity.SonObject
         System.out.println(familyFactory.createChildByKey("Son"));
+        System.out.println(familyFactory.createChildByKey("Son").getClass());
+        System.out.println("\n");
 
-        //printed [ParentObject{name='Son'}, ParentObject{name='Daughter'}]
-        System.out.println(familyFactory.createListOfAllDeclaredChildren());
+        //ParentObject{name='Son'}
+        //class ru.fadesml.factory.example.entity.SonObject
+        //ParentObject{name='Daughter'}
+        //class ru.fadesml.factory.example.entity.DaughterObject
+        familyFactory.createListOfAllDeclaredChildren().forEach(child -> System.out.println(child.toString() + "\n" + child.getClass()));
+        System.out.println("\n");
 
-        //printed [ParentObject{name='Son'}, ParentObject{name='AdoptedSon'}, ParentObject{name='Daughter'}]
-        System.out.println(familyFactory.createListOfAllChildren());
+
+        //ParentObject{name='Son'}
+        //class ru.fadesml.factory.example.entity.SonObject
+        //ParentObject{name='AdoptedSon'}
+        //class ru.fadesml.factory.example.entity.AdoptedSonObject
+        //ParentObject{name='Daughter'}
+        //class ru.fadesml.factory.example.entity.DaughterObject
+        familyFactory.createListOfAllChildren().forEach(child -> System.out.println(child.toString() + "\n" + child.getClass()));
     }
 }
+
