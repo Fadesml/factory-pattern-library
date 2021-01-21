@@ -23,12 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a39711d-7c71-42d1-9e46-deb4dde0697c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/fadesml/factory/FactoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/fadesml/factory/FactoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/fadesml/factory/FactoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/fadesml/factory/FactoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/fadesml/factory/annotations/FactoryObjectAnnotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/fadesml/factory/annotations/FactoryObjectAnnotation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611202779596</updated>
       <workItem from="1611202781718" duration="59000" />
-      <workItem from="1611222670942" duration="2999000" />
+      <workItem from="1611222670942" duration="3371000" />
     </task>
     <servers />
   </component>

@@ -70,7 +70,6 @@ ____
 
 ### Exceptions
 #### *FactoryObjectNotFoundException*
-Throws if library can't find *FactoryObjectAnnotation* in your child class  
 How to avoid this exception:
 1. If an error occurs when using the *createChildByKey()* method, please check the @FactoryObjectAnnotation of your child classes, making sure to make unique annotation parameter *key* values for each of them
 2. If an error occurs when using the *createListOfAllChildren()* or *createListOfAllDeclaredChildren()* method, please check your *subObjectResourcePathList* when initializing *FactoryService*
